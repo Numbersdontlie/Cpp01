@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:01:36 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/08 23:42:47 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/09 00:12:44 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 //it have to return a ptr to the 1st zombie
 //call announce for each one of the zombies
 //delete all the zombies
-Zombie *zombieHorde(int N, std::string name){
-	Zombie *tmp = new Zombie[N];
-	for (int i = 0; i <= N; i++){
+Zombie* zombieHorde(int N, std::string name){
+	Zombie* tmp = new Zombie[N];
+	for (int i = 0; i < N; ++i){
 		tmp[i].setName(name);
 	}
 	return tmp;
