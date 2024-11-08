@@ -1,12 +1,12 @@
-GREEN=\033[0;32m
-RED=\033[0;31m
+BLUE=\e[1;94m
+RED=\e[1;91m
 RESET=\033[0m
 
 NAME = zombieHorde
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
 SRC = main.cpp Zombie.cpp zombieHorde.cpp
 
@@ -19,7 +19,7 @@ all: $(NAME)
 
 $(NAME) : $(OBJS)
 		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-		@echo "$(NAME): $(GREEN)$(OBJS) was created $(RESET)"
+		@echo "$(NAME): $(BLUE)$(OBJS) was created $(RESET)"
 
 clean:
 		rm -f $(OBJS)
@@ -30,5 +30,6 @@ fclean: clean
 		@echo "$(RED)$(NAME) was deleted $(RESET)"
 
 re: fclean all
+		@echo "$(BLUE) let's do it again! XD :) :O .|. .|. $(RESET)"
 
 .PHONY: all clean fclean re

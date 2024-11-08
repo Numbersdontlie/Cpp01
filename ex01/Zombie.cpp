@@ -6,12 +6,15 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:58:48 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/08 14:42:26 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/08 23:51:50 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 #include <iostream>
+
+//Default constructor
+Zombie::Zombie() {}
 
 //constructor: to init zombie's name with provided string
 Zombie::Zombie(std::string name){

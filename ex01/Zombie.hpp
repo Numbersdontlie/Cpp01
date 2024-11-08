@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:58:20 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/08 14:42:33 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/08 23:37:13 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ class Zombie
 	std::string name;
 
 	public:
+	Zombie();
 	Zombie(std::string name);
 	~Zombie();
+	
 	void announce();
-    void setName(std::string name);
+	void setName(std::string name);
 };
 
 #endif
