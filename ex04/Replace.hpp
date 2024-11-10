@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 14:25:22 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/10 17:20:07 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/10 22:58:09 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,13 @@ class	Replace
 	std::string file;
 	std::string s1;
 	std::string s2;
-	void replaceOccurrences(std::string& content, const std::string& s1, const std::string& s2) const;
 
 	public:
 	Replace(const std::string& file, const std::string& s1, const std::string& s2);
 	bool processFile() const;
+
+	private:
+	void replaceOccurrences(const std::string& content, const std::string& s1, const std::string& s2) const;
 };
 
 #endif
