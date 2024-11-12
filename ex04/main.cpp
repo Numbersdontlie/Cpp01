@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 17:10:01 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/10 17:20:04 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/12 15:56:26 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,13 @@ int main(int argc, char* argv[]){
     std::string s1 = argv[2];
     std::string s2 = argv[3];
 
-    Replace replacer(file, s1, s2);
-    if(!replacer.processFile()){
+	if(s1.empty() || s2.empty()){
+		std::cerr<< RED << "Error: empty string not allowed" << RESET << std::endl;
+		return 1;
+	}
+
+    Replace replace(file, s1, s2);
+    if(!replace.processFile()){
         return 1;
     }
     return 0;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 14:25:22 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/10 22:58:09 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/12 16:11:56 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,8 @@ class	Replace
 	public:
 	Replace(const std::string& file, const std::string& s1, const std::string& s2);
 	bool processFile() const;
-
-	private:
-	void replaceOccurrences(const std::string& content, const std::string& s1, const std::string& s2) const;
+	void openFile(std::ifstream& input);
+	void createFile(std::ofstream& output);
 };
 
 #endif
