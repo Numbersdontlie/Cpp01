@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:46:30 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/09 00:14:04 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/15 11:59:13 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
     if (tmp){
         for(int i = 0; i < N; ++i){
             tmp[i].announce();
+            std::cout << PURPLE << "Adress of ZombieHorde is:" << &tmp[i] << RESET << std::endl;
         }
         delete[] tmp;
     }

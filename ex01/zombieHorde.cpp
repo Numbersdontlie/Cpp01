@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:01:36 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/09 00:12:44 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/15 11:59:11 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ Zombie* zombieHorde(int N, std::string name){
 	for (int i = 0; i < N; ++i){
 		tmp[i].setName(name);
 	}
+	std::cout << "Address of 1st element in tmp is:" << &tmp[0] << std::endl;
+	std::cout << "Address of returned pointer is:" << &tmp[0] << std::endl;
 	return tmp;
 }
