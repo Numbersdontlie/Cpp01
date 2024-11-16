@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:08:33 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/14 19:27:25 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/17 00:03:25 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Harl
         void error(void);
 
     public:
-        void complain(const std::string &level);
+        void complain(std::string level);
 };
 
 #endif

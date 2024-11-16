@@ -8,7 +8,7 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
-SRC = main.cpp Replace.cpp
+SRC = main.cpp
 
 OBJS = $(SRC:.cpp=.o)
 

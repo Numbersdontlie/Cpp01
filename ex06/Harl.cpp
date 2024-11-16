@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:10:16 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/14 23:06:45 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/17 00:10:42 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ void Harl::error(void){
 //Function to create an array of pointers to member functions
 //and an array of strings to compare the level and call the
 //correct function
-void Harl::complain(const std::string &level){
+void Harl::complain(std::string level){
+    
     void (Harl::*complainPtr[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
     std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     int level_idx = 0;
@@ -53,13 +54,13 @@ void Harl::complain(const std::string &level){
     switch(level_idx){
         case 0:
             (this->*complainPtr[0])();
-            break;
+            //fall through
         case 1:
             (this->*complainPtr[1])();
-            break;
+            //fall through
         case 2:
             (this->*complainPtr[2])();
-            break;
+            //fall through
         case 3:
             (this->*complainPtr[3])();
             break;
