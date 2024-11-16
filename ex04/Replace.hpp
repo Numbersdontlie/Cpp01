@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 14:25:22 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/13 23:36:35 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/16 18:52:05 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <sstream>
 
 #define BLUE "\e[1;94m"
 #define RED "\e[1;91m"
@@ -24,16 +25,15 @@
 class	Replace
 {
 	private:
-	std::string file;
-	std::string s1;
-	std::string s2;
-
-	std::string readFile() const;
-	void writeFile(const std::string& buffer) const;
+		std::string file;
+		std::string s1;
+		std::string s2;
+		std::string open_file() const;
+		void createFile(const std::string &buffer) const;
 
 	public:
-	Replace(const std::string& file, const std::string& s1, const std::string& s2);
-	void replaceString();
+		Replace(const std::string &file, const std::string &s1, const std::string &s2);
+		void replaceString();
 };
 
 #endif

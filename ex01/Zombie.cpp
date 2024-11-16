@@ -6,7 +6,7 @@
 /*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:58:48 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/15 11:59:07 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/15 12:38:48 by luifer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Zombie::~Zombie(void){
 //Put the zombie announcement in the required format
 void	Zombie::announce(void){
 	std::cout << BLUE << this->name << ": BraiiiiiiinnnzzzZ...\n" << RESET;
+	std::cout << BLUE << "Zombies: 🧟 \n" << RESET;
 }
 
 void	Zombie::setName(std::string name){
