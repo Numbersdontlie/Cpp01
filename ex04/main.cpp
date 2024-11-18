@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 17:10:01 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/16 23:49:55 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/18 12:41:25 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,13 @@ int	main(int argc, char **argv){
 
         input_file.open((argv[1]));
         if (!input_file){
-            std::cerr << RED << "Error: couldn't create input file" << RESET << std::endl;
+            std::cerr << RED << "Error: couldn't open input file" << RESET << std::endl;
             return (1);
         }
+		if (input_file.peek() == std::ifstream::traits_type::eof()){
+			std::cerr << RED << "Error: file is empty" << RESET << std::endl;
+			return (1);
+		}
 		output_file.open((std::string(argv[1]) + ".replace").c_str());
 		if (!output_file){
 			std::cerr << RED << "Error: couldn't create output file" << RESET << std::endl;

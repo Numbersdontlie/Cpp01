@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:10:16 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/17 00:10:42 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/18 13:08:19 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ void Harl::complain(std::string level){
     
     void (Harl::*complainPtr[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
     std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-    int level_idx = 0;
-    for(int i = 0; i < 4; i++){
+    int level_idx = -1;
+    for(int i = 0; i < 4; ++i){
         if(levels[i] == level){
             level_idx = i;
             break;
@@ -65,6 +65,6 @@ void Harl::complain(std::string level){
             (this->*complainPtr[3])();
             break;
         default:
-            std::cout << RED << "[ Probably complaining about insignificant problems ]" << RESET << std::endl;
+           std::cout << RED << "[ Probably complaining about insignificant problems ]" << RESET << std::endl;
     }
 }

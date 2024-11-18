@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luifer <luifer@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 01:33:23 by luifer            #+#    #+#             */
-/*   Updated: 2024/11/15 12:13:49 by luifer           ###   ########.fr       */
+/*   Updated: 2024/11/18 12:06:57 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int main()
     gun.setType("Chainsaw 🪚");
     tony.attack();
 
-    Weapon machete("Machete 🗡️");
     HumanB luifer("Luifer");
     luifer.attack();
+	Weapon machete("Machete 🗡️");
     luifer.setWeapon(machete);
     luifer.attack();
     machete.setType("Katana 🗡️");
